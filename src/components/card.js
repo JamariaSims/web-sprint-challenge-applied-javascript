@@ -38,6 +38,10 @@ const Card = (article) => {
 	imgHolder.appendChild(img);
 	cardHolder.appendChild(headlineHolder);
 	cardHolder.appendChild(authorHolder);
+
+	cardHolder.addEventListener("click", (e) => {
+		console.log(e.target.innerHTML);
+	});
 	return cardHolder;
 };
 // TASK 6

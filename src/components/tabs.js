@@ -16,7 +16,6 @@ const tabsAppender = (selector) => {
 	setTimeout(() => {
 		axios.get("http://localhost:5000/api/topics").then((response) => {
 			document.querySelector(selector).appendChild(Tabs(response.data.topics));
-			console.log(response.data.topics);
 		});
 	}, 1000);
 };

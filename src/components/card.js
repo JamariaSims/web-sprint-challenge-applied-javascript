@@ -40,7 +40,9 @@ const Card = (article) => {
 	cardHolder.appendChild(authorHolder);
 
 	cardHolder.addEventListener("click", (e) => {
-		console.log(e.target.innerHTML);
+		e.target.className === "card"
+			? console.log(e.target.querySelector(".headline").innerHTML)
+			: null;
 	});
 	return cardHolder;
 };
